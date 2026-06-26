@@ -58,8 +58,8 @@ async function handleSubmit() {
 
   // Insert your raw string credentials here directly
   // get from env.local
-  const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const SUPABASE_URL = 'https://dbapyjkvuybzjwqitert.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_7c8aXHFt0sZ-QJIkXRWq1Q_y0Nn_QRq';
 
   try {
     const response = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {

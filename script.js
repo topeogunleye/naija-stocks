@@ -79,7 +79,11 @@ async function handleSubmit() {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to join the waitlist. Please try again.');
+      const errorBody = await response.json();
+      console.error('Supabase error:', errorBody);
+      throw new Error(
+        errorBody.message || errorBody.hint || JSON.stringify(errorBody),
+      );
     }
 
     // Update UI to Success State
